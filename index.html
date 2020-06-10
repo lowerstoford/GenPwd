@@ -2,17 +2,23 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>GenPwd Build 0.2.1</title>
+<title>GenPwd Build 0.9.8</title>
 <style type="text/css">
 .foot {
     font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-    font-size: xx-small;
+    font-size: x-small;
 }
+	.name {
+		font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: large;
+		font-weight: bold;
+	}
 </style>
 </head>
 
 <body>
-	<p> <strong>GenPwd Build 0.2.1</strong></p>
+	<p class="name">Password Generator
+	</p>
 <div>
 
 <input type="hidden" id="my-input" />
@@ -23,11 +29,11 @@
 	
 		
 	
-	<p><button id="button">Generate</button> <button onclick="myFunction()">Copy to Clipboard</button></p>
+	<p><button id="button">Generate</button> <button onclick="CopyToClipboard()">Copy to Clipboard</button></p>
 		
 
 </div>
-	<footer class="foot">Lee Gilham 2020</footer>
+	<footer class="foot">GenPwd - Build 0.9.8</footer>
 <script>
 	
 	
@@ -63,7 +69,7 @@ function getRndInteger(minimum, maximum) {
   return Math.floor(Math.random() * (maximum - minimum)) + minimum;
 };
 
-	function myFunction() {
+	function CopyToClipboard() {
   /* Get the text field */
   var copyText = document.getElementById("pwd");
 
@@ -75,7 +81,7 @@ function getRndInteger(minimum, maximum) {
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  /*alert("Copied the text: " + copyText.value);*/
 }
 	
 	
